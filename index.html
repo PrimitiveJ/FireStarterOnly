@@ -5,6 +5,10 @@
 </head>
 <body>
     <style>
+        * {
+            background-color: black;
+            color:white
+        }
         /* (A) BLINKING KEYFRAMES */
         @keyframes blinking {
           0% {
@@ -25,8 +29,8 @@
         /* (B) ATTACH BLINKING KEYFRAMES TO CONTAINER */
         /* animation: name | time | iterations */
         #demo {
-          width: 100%vw;
-          height: 100%vh;
+          width: 100%;
+          height: 100%;
           animation: blinking 1s infinite;
         }
         </style>
