@@ -4,17 +4,45 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <style>
+        /* (A) BLINKING KEYFRAMES */
+        @keyframes blinking {
+          0% {
+            background-color: #ff3d50;
+            border: 5px solid #871924;
+          }
+          /* ADD MORE KEYFRAMES IF YOU WANT
+          50% {
+            background-color: #55d66b;
+            border: 5px solid #126620;
+          } */
+          100% {
+            background-color: #222291;
+            border: 5px solid #6565f2;
+          }
+        }
+         
+        /* (B) ATTACH BLINKING KEYFRAMES TO CONTAINER */
+        /* animation: name | time | iterations */
+        #demo {
+          width: 100%vw;
+          height: 100%vh;
+          animation: blinking 1s infinite;
+        }
+        </style>
+          
+        <div id="demo"><audio id="myAudio">
+            <source src="assets\audio\Prodigy - Firestarter.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          
+          <p>Click the buttons to play or pause the audio.</p>
+          
+          <button onclick="playAudio()" type="button">Play Audio</button>
+          <button onclick="pauseAudio()" type="button">Pause Audio</button> 
+          <button onclick="restartAudio()" type="button">Restart Audio</button></div>
 
-<audio id="myAudio">
-  <source src="assets\audio\Prodigy - Firestarter.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 
-<p>Click the buttons to play or pause the audio.</p>
-
-<button onclick="playAudio()" type="button">Play Audio</button>
-<button onclick="pauseAudio()" type="button">Pause Audio</button> 
-<button onclick="restartAudio()" type="button">Restart Audio</button>
 
 <script>
 var x = document.getElementById("myAudio"); 
